@@ -1,0 +1,33 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Data.Fields
+@using Sitecore.Data.Items
+@model Assignment.Models.Aboutus
+
+<link rel="stylesheet" href="~/Styles/Home/Aboutus.css" />
+
+<div class="full">
+
+    @if (Model != null && Model.Item != null)
+    {
+        <div class="about-us feature-item">
+            <div class="about-us-icon">
+                @Html.Sitecore().Field("Image", Model.Item)
+                <div class="experience">
+                    <h2>30</h2>
+                    <p>Year Experience</p>
+                </div>
+            </div>
+            <div class="about-us-text">
+                <h2>@Html.Sitecore().Field("Preheader", Model.Item)</h2>
+                <h1>@Html.Sitecore().Field("Title", Model.Item)</h1>
+                <p>@Html.Sitecore().Field("Description", Model.Item)</p>
+                <p class="quote">@Html.Sitecore().Field("Quote", Model.Item)</p>
+                <p class="quote-author">@Html.Sitecore().Field("QuoteAuthor", Model.Item)</p>
+                <a href="@Html.Sitecore().Field("ButtonLink", Model.Item)" class="learn-more">LEARN MORE</a>
+            </div>
+        </div>
+
+    }
+
+</div>
+

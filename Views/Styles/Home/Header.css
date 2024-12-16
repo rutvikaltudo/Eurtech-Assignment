@@ -1,0 +1,64 @@
+﻿.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow for separation */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-items {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Adjust space between navbar and button */
+}
+
+    .nav-button a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .nav-button a:hover {
+            background-color: #0056b3;
+        }
+
+/* Add space below the header */
+body {
+    padding-top: 60px; /* Adjust based on the height of your header */
+}
